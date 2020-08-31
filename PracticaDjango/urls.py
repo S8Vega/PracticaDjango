@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('inicio/', views.index, name="inicio"),
     path('pagina-pruebas/', views.pagina, name="pagina"),
+    path('pagina-pruebas/<int:redirigir>', views.pagina, name="pagina"),
     path('contacto/<str:nombre>/<str:apellido>/', views.contacto, name="contacto"),
     path('contacto/<str:nombre>/', views.contacto, name="contacto"),
     path('contacto/', views.contacto, name="contacto"),

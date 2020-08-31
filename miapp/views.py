@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 layout = """
     <h1>sitio web con Django</h1>
@@ -12,6 +12,9 @@ layout = """
         </li>
         <li>
             <a href="/pagina-pruebas">pagina de pruebas</a>
+        </li>
+        <li>
+            <a href="/contacto">contacto</a>
         </li>
     </ul>
     <hr/>
@@ -29,7 +32,9 @@ def hola_mundo(request):
     """
     return HttpResponse(layout + html)
 
-def pagina(request):
+def pagina(request, redirigir = 0):
+    if redirigir == 1:
+        return redirect("contacto", nombre = "Sebastian", apellido = "Vega")
     html = """
         <h1>Pagina de mi web</h1>
         <p>creado por Sebastian Vega</p>
