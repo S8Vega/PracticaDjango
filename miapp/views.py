@@ -35,3 +35,7 @@ def pagina(request):
         <p>creado por Sebastian Vega</p>
     """
     return HttpResponse(layout + html)
+
+def contacto(request, nombre):
+    html = f"<h2>contacto {nombre}</h2>"
+    return HttpResponse(layout + html)
