@@ -1,8 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>{%block title%} titulo {% endblock %} | S8Vega</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/styles.css' %}"
+    />
   </head>
   <body>
     <h1>sitio web con Django</h1>
