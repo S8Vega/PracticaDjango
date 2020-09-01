@@ -19,27 +19,17 @@ layout = """
     </ul>
     <hr/>
 """
+
 def index(request):
-    html = """
-        <h1>Inicio</h1>
-    """
-    return HttpResponse(layout + html)
+    return render(request, "index.html")
 
 def hola_mundo(request):
-    html = """
-        <h1>hola mundo</h1>
-        <h3>soy Sebastian</h3>
-    """
-    return HttpResponse(layout + html)
+    return render(request, "hola_mundo.html")
 
 def pagina(request, redirigir = 0):
     if redirigir == 1:
         return redirect("contacto", nombre = "Sebastian", apellido = "Vega")
-    html = """
-        <h1>Pagina de mi web</h1>
-        <p>creado por Sebastian Vega</p>
-    """
-    return HttpResponse(layout + html)
+    return render(request, "pagina.html")
 
 def contacto(request, nombre = "", apellido = ""):
     html = f"<h2>contacto {nombre} {apellido}</h2>"
