@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{%block title%} {% endblock %} | S8Vega</title>
+  </head>
+  <body>
+    <h1>sitio web con Django</h1>
+    <hr />
+    <ul>
+      <li>
+        <a href="/inicio">Inicio</a>
+      </li>
+      <li>
+        <a href="/hola-mundo">hola mundo</a>
+      </li>
+      <li>
+        <a href="/pagina-pruebas">pagina de pruebas</a>
+      </li>
+      <li>
+        <a href="/contacto">contacto</a>
+      </li>
+    </ul>
+    <hr />
+    <div id="content">{%block content%} {% endblock %}</div>
+    <hr />
+    <footer>Master en python &copy; | S8Vega</footer>
+  </body>
+</html>
