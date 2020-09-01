@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>{%block title%} {% endblock %} | S8Vega</title>
+    <title>{%block title%} titulo {% endblock %} | S8Vega</title>
   </head>
   <body>
     <h1>sitio web con Django</h1>
@@ -22,7 +22,11 @@
       </li>
     </ul>
     <hr />
-    <div id="content">{%block content%} {% endblock %}</div>
+    <div id="content">
+      {%block content%}
+      <strong>Contenido del bloque original</strong>
+      {% endblock %}
+    </div>
     <hr />
     <footer>Master en python &copy; | S8Vega</footer>
   </body>
