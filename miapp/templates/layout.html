@@ -11,29 +11,33 @@
     />
   </head>
   <body>
-    <h1>sitio web con Django</h1>
-    <hr />
-    <ul>
-      <li>
-        <a href="/inicio">Inicio</a>
-      </li>
-      <li>
-        <a href="/hola-mundo">hola mundo</a>
-      </li>
-      <li>
-        <a href="/pagina-pruebas">pagina de pruebas</a>
-      </li>
-      <li>
-        <a href="/contacto">contacto</a>
-      </li>
-    </ul>
-    <hr />
+    <header>
+      <div id="logotipo">
+        <h1>sitio web con Django</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/inicio">Inicio</a>
+        </li>
+        <li>
+          <a href="/hola-mundo">hola mundo</a>
+        </li>
+        <li>
+          <a href="/pagina-pruebas">pagina de pruebas</a>
+        </li>
+        <li>
+          <a href="/contacto">contacto</a>
+        </li>
+      </ul>
+    </nav>
     <div id="content">
+      <h2 class="title">titulo de prueba</h2>
       {%block content%}
       <strong>Contenido del bloque original</strong>
       {% endblock %}
     </div>
-    <hr />
     <footer>Master en python &copy; | S8Vega</footer>
   </body>
 </html>
