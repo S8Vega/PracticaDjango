@@ -20,16 +20,16 @@
     <nav>
       <ul>
         <li>
-          <a href="/inicio">Inicio</a>
+          <a href="{% url 'index' %}">Inicio</a>
         </li>
         <li>
-          <a href="/hola-mundo">hola mundo</a>
+          <a href="{% url 'hola_mundo' %}">hola mundo</a>
         </li>
         <li>
-          <a href="/pagina-pruebas">pagina de pruebas</a>
+          <a href="{% url 'pagina' %}">pagina de pruebas</a>
         </li>
         <li>
-          <a href="/contacto">contacto</a>
+          <a href="{% url 'contacto' 'Sebastian' 'Vega' %}">contacto</a>
         </li>
       </ul>
     </nav>
