@@ -19,8 +19,11 @@
     <h3>listado de lenguajes de programacion</h3>
     <ul>
         {% for lenguaje in lenguajes %}
-            <li>{{lenguaje}}</li>
+            <li>{{forloop.counter}}. {{lenguaje}}</li>
+        {% empty %}
+            <p>no hay lenguajes que mostrar</p>
         {% endfor %}
+        
     </ul>
 
     <p>{{mi_variable}}</p>
