@@ -9,5 +9,12 @@
         <h1>hola</h1>
     {% endcomment %}
     <h1 class="title">{{title}}</h1>
-    {{mi_variable}}
+    
+    {% if nombre %}
+        <p>{{nombre}}</p>
+    {% else %}
+        <strong>el nombre no existe</strong>
+    {% endif %}
+
+    <p>{{mi_variable}}</p>
 {% endblock%}

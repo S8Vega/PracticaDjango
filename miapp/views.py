@@ -20,20 +20,26 @@ layout = """
     <hr/>
 """
 
+
 def index(request):
+    nombre = "Sebastian Vega"
     return render(request, "index.html", {
         'title': "Inicio",
         'mi_variable': "soy un dato que esta en la vista",
+        'nombre': nombre
     })
+
 
 def hola_mundo(request):
     return render(request, "hola_mundo.html")
 
-def pagina(request, redirigir = 0):
+
+def pagina(request, redirigir=0):
     if redirigir == 1:
-        return redirect("contacto", nombre = "Sebastian", apellido = "Vega")
+        return redirect("contacto", nombre="Sebastian", apellido="Vega")
     return render(request, "pagina.html")
 
-def contacto(request, nombre = "", apellido = ""):
+
+def contacto(request, nombre="", apellido=""):
     html = f"<h2>contacto {nombre} {apellido}</h2>"
     return HttpResponse(layout + html)
