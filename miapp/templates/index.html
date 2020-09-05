@@ -16,5 +16,12 @@
         <strong>el nombre no existe</strong>
     {% endif %}
 
+    <h3>listado de lenguajes de programacion</h3>
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>{{lenguaje}}</li>
+        {% endfor %}
+    </ul>
+
     <p>{{mi_variable}}</p>
 {% endblock%}

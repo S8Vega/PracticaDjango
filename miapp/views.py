@@ -23,10 +23,12 @@ layout = """
 
 def index(request):
     nombre = "Sebastian Vega"
+    lenguajes = ["JavaScript", "Python", "Java", "C++"]
     return render(request, "index.html", {
         'title': "Inicio",
         'mi_variable': "soy un dato que esta en la vista",
-        'nombre': nombre
+        'nombre': nombre,
+        'lenguajes': lenguajes
     })
 
 
