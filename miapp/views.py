@@ -22,13 +22,16 @@ layout = """
 
 
 def index(request):
+    year = 2021
+    hasta = range(year, 2051)
     nombre = "Sebastian Vega"
     lenguajes = ["JavaScript", "Python", "Java", "C++"]
     return render(request, "index.html", {
         'title': "Inicio",
-        'mi_variable': "soy un dato que esta en la vista",
+        'mi_variable': "años hasta el 2050",
         'nombre': nombre,
-        'lenguajes': lenguajes
+        'lenguajes': lenguajes,
+        'years': hasta
     })
 
 

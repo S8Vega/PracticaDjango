@@ -25,6 +25,12 @@
         {% endfor %}
         
     </ul>
-
     <p>{{mi_variable}}</p>
+    <ul>
+        {% for year in years %}
+            {% if year|divisibleby:2 %}
+                <li>{{year}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 {% endblock%}
