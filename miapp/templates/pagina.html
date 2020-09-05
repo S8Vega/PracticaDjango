@@ -7,5 +7,11 @@
 {%block content %}
     {{block.super}}
     <h1 class="title">Pagina de mi web</h1>
-    <p>creado por Sebastian Vega</p>
+    <p>{{"creado por Sebastian Vega ñññ"|cut:"ñ"}}</p>
+    <p>{{texto|default:"no hay nada"}}</p>
+    <p>{{lista|join:", "}}</p>
+    <p>{{lista|random}}</p>
+    <p>{{"texto pruebas"|length}}</p>
+    <p>{{"texto pruebas"|upper}}</p>
+    <p>{{"<strong>texto pruebas</strong>"|striptags|wordcount}}</p>
 {% endblock%}
