@@ -1,12 +1,13 @@
 {% extends "layout.html"%}
 
 {% block title %}
-    Inicio
+    {{title}}
 {% endblock%} 
 
 {% block content %}
     {% comment 'Esto es un comentario' %}
         <h1>hola</h1>
     {% endcomment %}
-    <h1 class="title">Inicio</h1>
+    <h1 class="title">{{title}}</h1>
+    {{mi_variable}}
 {% endblock%}

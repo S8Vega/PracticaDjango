@@ -21,7 +21,10 @@ layout = """
 """
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {
+        'title': "Inicio",
+        'mi_variable': "soy un dato que esta en la vista",
+    })
 
 def hola_mundo(request):
     return render(request, "hola_mundo.html")
