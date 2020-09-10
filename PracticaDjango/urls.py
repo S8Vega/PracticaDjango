@@ -24,7 +24,9 @@ urlpatterns = [
     path('inicio/', views.index, name="inicio"),
     path('pagina-pruebas/', views.pagina, name="pagina"),
     path('pagina-pruebas/<int:redirigir>', views.pagina, name="pagina"),
-    path('contacto/<str:nombre>/<str:apellido>/', views.contacto, name="contacto"),
+    path('contacto/<str:nombre>/<str:apellido>/',
+         views.contacto, name="contacto"),
     path('contacto/<str:nombre>/', views.contacto, name="contacto"),
     path('contacto/', views.contacto, name="contacto"),
+    path('crear-articulo/', views.crear_articulo, name="crear_articulo"),
 ]
